@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddBeritaActivity">
+    <LinearLayout
+        android:id="@+id/add_berita_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="27dp"
+        android:layout_marginRight="27dp"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/judulEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Title"
+            android:maxLines="1"
+            android:singleLine="true"/>
+        <EditText
+            android:id="@+id/kategoriEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kategori"
+            android:imeActionId="6"
+            android:imeOptions="actionUnspecified"
+            android:maxLines="1"
+            android:singleLine="true"/>
+        <EditText
+            android:id="@+id/urlImageEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Url Image"
+            android:imeActionId="6"
+            android:imeOptions="actionUnspecified"
+            android:maxLines="1"
+            android:singleLine="true"/>
+        <Button
+            android:id="@+id/addBeritaButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:background="@color/gray"
+            android:text="Submit"
+            android:textStyle="bold"/>
+        <!--        style="?android:textAppearanceSmall" : attribut yang berada dalam button,
+                    dan di commnent karena merubah style dari button-->
+    </LinearLayout>
+
+</RelativeLayout>
