@@ -82,7 +82,7 @@ public class ViewActivity extends AppCompatActivity {
 
     private void postBerita(Berita beritaPayload ){
         beritaViewModel.postBeritaRepository(beritaPayload).observe(this, beritaResponse -> {
-            berita = beritaResponse.getData();
+//            berita = beritaResponse.getData();
             finish();
         });
     }

@@ -18,6 +18,7 @@ import com.bumptech.glide.Glide;
 import com.example.tugasday3.R;
 import com.example.tugasday3.ViewActivity;
 import com.example.tugasday3.model.Berita;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -43,7 +44,11 @@ public class BeritaAdapter extends RecyclerView.Adapter<BeritaAdapter.BeritaView
         holder.judulTv.setText(beritas.get(position).getJudul());
         holder.kategoriTv.setText(beritas.get(position).getKategori());
 //        holder.urlImageIv.setText(beritas.get(position).getUrlImage());
-        Glide.with(context).load(beritas.get(position).getUrlImage()).into(holder.urlImageIv);
+//        Glide.with(context).load(beritas.get(position).getUrlImage()).into(holder.urlImageIv);
+//        beritas.get(position).setUrlImage(beritas.get(position).getUrlImage());
+        String imageUri = beritas.get(position).getUrlImage();
+        Picasso.get().load(imageUri).into(holder.urlImageIv);
+
 
         holder.beritaLl.setOnClickListener(new View.OnClickListener(){
             @Override

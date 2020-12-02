@@ -1,5 +1,7 @@
 package com.example.tugasday3.viewmodels;
 
+import android.util.Log;
+
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
@@ -48,8 +50,9 @@ public class BeritaViewModel extends ViewModel {
         if (mutableBeritaLiveData == null) {
             beritasRepository = BeritasRepository.getInstance();
         }
-        mutableBeritaLiveData = beritasRepository.postNasabah(beritaPayload);
-
+        Log.d("Halo", "2");
+        mutableBeritaLiveData = beritasRepository.postBerita(beritaPayload);
+        Log.d("Halo", "3");
         return mutableBeritaLiveData;
     }
 }

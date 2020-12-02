@@ -48,13 +48,15 @@ public class BeritasRepository {
         return beritasData;
     }
 
-    public MutableLiveData<BeritaResponse> postNasabah(Berita nasabahPayload){
+    public MutableLiveData<BeritaResponse> postBerita(Berita beritaPayload){
         MutableLiveData<BeritaResponse> beritaData = new MutableLiveData<>();
-        beritaApi.postBerita(nasabahPayload).enqueue(new Callback<BeritaResponse>() {
+        beritaApi.postBerita(beritaPayload).enqueue(new Callback<BeritaResponse>() {
             @Override
             public void onResponse(Call<BeritaResponse> call,
                                    Response<BeritaResponse> response) {
+                Log.d("Halo", response.message());
                 if (response.isSuccessful()){
+                    Log.d("Halo", "5");
                     beritaData.setValue(response.body());
                 }
             }
